@@ -1,0 +1,31 @@
+#!/usr/bin/php
+<?php
+
+
+if ($argc == 1) {
+    $html_buffer = '';
+
+    while (!feof(STDIN))
+        $html_buffer .= fgets(STDIN);
+
+    echo html_entity_decode(strip_tags($html_buffer));
+
+    exit;
+}
+
+foreach (array_slice($argv, 1) as $file) {
+
+    if (!is_file($file)) {
+        fwrite(STDERR, "detag: file \"{$file}\" not found\n");
+        continue;
+    }
+
+    if (!is_readable($file)) {
+        fwrite(STDERR, "detag: file \"{$file}\" could not be read\n");
+        continue;
+    }
+
+    $html_buffer = file_get_contents($file);
+
+    echo html_entity_decode(strip_tags($html_buffer));
+}

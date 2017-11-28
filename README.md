@@ -21,12 +21,12 @@ href="/wiki/American_Renaissance_(literature)" title="American Renaissance
 (literature)">American Renaissance</a> period. His best known works include ...</p>
 ```
 
-If this file is saved to `melville.html`, one can simply run `detag
+If this text is saved to `melville.html`, one can simply run `detag
 melville.html` or `cat melville.html | detag` to print the contents of the
 file with all tags removed and all entities decoded.
 
-An even more useful command is `detag melville.html | fmt` (\*nix systems
-only), which produces the following output:
+An even more useful command is `detag melville.html | fmt` (for \*nix
+systems), which produces the following output:
 
 ```text
 Herman Melville[a] (August 1, 1819 – September 28, 1891) was

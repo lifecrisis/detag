@@ -1,6 +1,8 @@
 #!/usr/bin/php
 <?php
 
+// Works with PHP version 5.6 or later.
+
 
 if ($argc == 1) {
     $html_buffer = '';

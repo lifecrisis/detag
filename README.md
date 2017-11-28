@@ -25,17 +25,19 @@ If this file is saved to `melville.html`, one can simply run `detag
 melville.html` or `cat melville.html | detag` to print the contents of the
 file with all tags removed and all entities decoded.
 
-An even more useful command is `detag melville.html | fmt`, which produces
-the following output:
+An even more useful command is `detag melville.html | fmt` (\*nix systems
+only), which produces the following output:
 
-> Herman Melville[a] (August 1, 1819 – September 28, 1891) was
-> an American novelist, short story writer, and poet of the American
-> Renaissance period. His best known works include ...
+```text
+Herman Melville[a] (August 1, 1819 – September 28, 1891) was
+an American novelist, short story writer, and poet of the American
+Renaissance period. His best known works include ...
+```
 
 Multiple file arguments can be specified, and the output will be printed as
 one blob of text.
 
-## Use
+## Suggested Use
 
 Admittedly, this tool is not very sophisticated.  It's really just a nifty
 toy.  You might use it in a simple shell script or as a filter for some
